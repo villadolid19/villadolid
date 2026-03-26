@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
 
-import Pic1 from "../Assets/Don-2.jpg";
+import Pic1 from "../Assets/Formal wear.png";
 import { GiAchievement } from "react-icons/gi";
 import { FaGraduationCap } from "react-icons/fa";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Profile.css";
 
-import Pic1 from "../Assets/me.png";
+import Pic1 from "../Assets/Formal wear.png";
 import { FaGithub } from "react-icons/fa6";
 import Resume from "../Assets/Villadolid-Resume CV.pdf";
 import ScrollReveal from "scrollreveal";
