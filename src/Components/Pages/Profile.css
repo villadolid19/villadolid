@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root{
+    --black: black;
+    --white: rgb(200, 200, 200);
+    --dark-blue: #282a3c;
+    --bg-color: #171b22;
+    --tint-blue: #61dafb;
+    --white-smoke: rgb(200, 200, 200);
+}
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.Profile {
+    /* margin-top: 3.45rem; */
+    top: 0;
+    left: 0;
+    padding: 3px;
+    width: 100%;
+    height: 90vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.components{
+    height: auto;
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.components .text-sec{
+    height: 450px;
+    width: 500px;
+    display: flex;
+    margin-left: 3rem;
+    gap: 7px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 600px;
+    width: 440px;
+}
+.img-sec .pic {
+    margin-top: 1rem;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    box-shadow: 0 6px 10px var(--tint-blue);
+    /* background: url('/src/Components/Assets/Don1.jpg');
+    background-size: 300%; */
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.2rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.img-sec .circle{
+    margin-top: 4rem;
+    height: 1.5rem;
+    width: 250px;
+    border-radius: 60%;
+    box-shadow: 0 4px 10px 3px var(--tint-blue);
+    background-color: var(--dark-blue);
+    backdrop-filter: blur(50px);
+    animation: shadow 4s ease-in-out infinite;
+
+}
+
+@keyframes shadow{
+    0%{
+        box-shadow: 0 3px 13px 12px var(--tint-blue);
+        height: 1.5rem;
+        width: 250px;
+    }
+    50%{
+        box-shadow: 0 1px 10px 3px var(--tint-blue);
+        height: .8rem;
+        width: 170px;
+    }
+    100%{
+        box-shadow: 0 3px 13px 12px var(--tint-blue);
+        height: 1.5rem;
+        width: 250px;
+    }
+}
+
+
+.text-sec .name{
+    font-size: 2rem;
+    color: var(--tint-blue);
+    font-weight: 500;
+}
+
+.text-sec .hello{
+    font-size: 1.5rem;
+    color: var(--white-smoke);
+    margin-bottom: 6px;
+}
+
+.text-sec .front{
+    font-size: 1.5rem;
+    color: var(--white-smoke);
+}
+
+.buttons-sec{
+    margin-top: 8px;
+    height: 40px;
+    width: 100%;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-sec .dl-cv{
+    border: none;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid; 
+    border-color: var(--tint-blue);
+    height: 2.5rem;
+    width: 9rem;
+    background-color: var(--bg-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--tint-blue);
+    display: inline-block;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.dl-cv:hover{
+    background-color: var(--tint-blue);
+    color: var(--bg-color);
+    border-color: var(--black);
+}
+
+.buttons-sec .contact-info{
+    border: none;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--tint-blue);
+    height: 2.5rem;
+    width: 9rem;
+    background-color: var(--tint-blue);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.git-sec .git-img{
+    height: 2rem;
+    width: 2rem;
+    color: var(--tint-blue);
+    cursor: pointer;
+    margin-top: 4px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.git-sec .git-img:hover{
+    transform: scale(1.2);
+}
+
+
+/* BREAK POINTS */
+
+@media (max-width: 1200px){
+    .Profile {
+        padding: 0;
+    }
+    .components{
+        padding: 0;
+    }
+
+    .components .pic {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 1120px){
+    .components .text-sec{
+        margin-left: 0;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 1000px){
+    .components{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .components .text-sec{
+        position: relative;
+        align-items: center;
+    }
+
+    .img-sec .circle{
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 600px){
+    .components .pic {
+        height: 350px;
+        width: 350px;
+    }
+    .components .img-sec{
+        margin-top: -4rem;
+    }
+    .text-sec{
+        margin-top: -6rem;
+        margin-bottom: -4rem;
+    }
+    .text-sec .hello{
+        font-size: 1.2rem;
+    }
+    .text-sec .name{
+        font-size: 1.5rem;
+    }
+    .text-sec .front{
+        font-size: 1.2rem;
+    }
+
+    .buttons-sec{
+        gap: .5rem;
+    }
+    .git-sec .git-img{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .buttons-sec .dl-cv{
+        height: 2rem;
+        width: 7rem;
+        font-size: .7rem;
+    }
+
+    .img-sec .circle{
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 400px){
+    .components .img-sec .pic {
+        height: 200px;
+        width: 200px;
+    }
+    .components .img-sec{
+        margin-top: -16rem;
+        margin-bottom: -2rem;
+    }
+    .text-sec{
+        margin-top: -8rem;
+        margin-bottom: -8rem;
+    }
+    
+    .text-sec .hello{
+        font-size: 14px;
+    }
+    .text-sec .name{
+        font-size: 1.1rem;
+    }
+    .text-sec .front{
+        font-size: 16px;
+    }
+    .img-sec .circle{
+        margin-top: 2.5rem;
+        width: 100px;
+        height: 1rem;
+    }
+    @keyframes shadow{
+        0%{
+            box-shadow: 0 2px 8px 7px var(--tint-blue);
+            height: 1rem;
+            width: 130px;
+        }
+        50%{
+            box-shadow: 0 1px 7px 2px var(--tint-blue);
+            height: .5rem;
+            width: 80px;
+        }
+        100%{
+            box-shadow: 0 2px 8px 9px var(--tint-blue);
+            height: 1rem;
+            width: 130px;
+        }
+    }
+}
