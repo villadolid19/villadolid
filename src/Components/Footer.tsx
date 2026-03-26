@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         >
           <FaFacebook />
         </a>
-        <a href="https://www.instagram.com/dondeon1999/" className="ig">
+        <a href="https://www.instagram.com/dddcv.dy" className="ig">
           <FaInstagram />
         </a>
         <a
