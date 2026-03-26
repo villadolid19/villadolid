@@ -7,8 +7,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 // Import Swiper styles
+//@ts-ignore
 import "swiper/css";
+//@ts-ignore
 import "swiper/css/effect-coverflow";
+//@ts-ignore
 import "swiper/css/pagination";
 
 import Login from "../Assets/Log-in.jpg";
