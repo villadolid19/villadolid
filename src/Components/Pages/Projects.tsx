@@ -4,7 +4,7 @@ import "./Projects.css";
 import { NavLink } from "react-router-dom";
 
 import Login from "../Assets/Log-in.jpg";
-import Portfolio from "../Assets/Portfolio.png";
+// import Portfolio from "../Assets/Portfolio.png";
 // import Dash from "../Assets/Dashboard.jpg";
 // import Anal from "../Assets/Analytics.jpg";
 // import Rept from "../Assets/Report.jpg";
@@ -31,12 +31,12 @@ const Projects: React.FC = () => {
           </div>
 
           <div className="proj-div">
-            <img src={Portfolio} alt="First Portfolio" />
+            {/* <img src={Portfolio} alt="First Portfolio" /> */}
             <div className="info">
-              <h2>First Portfolio</h2>
-              <NavLink to="https://denzel-villadolid.vercel.app/" className="a">
+              <h2>Upcoming</h2>
+              {/* <NavLink to="https://denzel-villadolid.vercel.app/" className="a">
                 <FaArrowUpRightFromSquare className="icon" />
-              </NavLink>
+              </NavLink> */}
             </div>
           </div>
 
